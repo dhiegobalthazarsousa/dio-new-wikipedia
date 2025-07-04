@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-secondary: rgb(245, 245, 245);
+    --color-text: rgb(29, 29, 29);
+    --color-text-hover: rgb(102, 102, 102);
+}
+
+a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: var(--color-secondary);
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: white;
+}
+
+header>figure{
+    width: 20%;
+    min-width: 200px;
+}
+
+header>section{
+    width: 40%;
+    min-width: 200px;
+}
+
+header>nav{
+    width: 20%;
+    min-width: 200px;
+}
+
+header>figure>img{
+    width: 120px;
+}
+
+header>nav ul{
+    gap: 1.1rem;
+}
+
+header>nav li{
+    list-style: none;
+}
+
+header>nav a{
+    text-decoration: none;
+    color: var(--color-text);
+    text-transform: capitalize;
+}
+
+header>nav a:hover{
+    cursor: pointer;
+    color: var(--color-text-hover);
+}
+
+.flex-around{
+    justify-content: space-around;
+}
+
+.flex-items-center{
+    align-items: center;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.search-container{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-container input{
+    width: 100%;
+    border: 0 none;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+    header{
+        display: flex;
+        -webkit-display: flex; /* Safari e Chrome */
+        -moz-display: flex; /* Firefox */
+        -ms-display: flex; /* Internet Explorer */
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header>figure{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+    }
+
+    header>section{
+        width: 100%;
+        min-width: 200px;
+    }
+
+    header>nav{
+        display: none;
+        -webkit-display: none;
+        -moz-display: none;
+        -ms-display: none;
+    }
+}
